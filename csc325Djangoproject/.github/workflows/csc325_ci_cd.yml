@@ -6,9 +6,8 @@ on:
         - main
 
 jobs:
-    setup:
-      - name: build-test-deploy
-        runs-on: ubuntu-latest
+     build-test-deploy:
+      runs-on: ubuntu-latest
 
       steps:
         - name: Checkout code
