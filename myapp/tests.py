@@ -23,3 +23,13 @@ class PageViewTests(TestCase):
             response,
             "<p>This is the about page of my Django application.</p>",
         )
+    def test_contact_page(self):
+        response = self.client.get(reverse("contact"))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response["Content-Type"], "text/html; charset=utf-8")
+        self.assertContains(response, "<h1>Contact Page</h1>")
+        self.assertContains(
+            response,
+            "<p>This is the contact page of my Django application.</p>",
+        )
