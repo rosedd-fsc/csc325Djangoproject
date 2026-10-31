@@ -6,7 +6,8 @@ on:
         - main
 
 jobs:
-    build-test-deploy:
+    setup:
+      name: Setup
         runs-on: ubuntu-latest
 
         steps:
@@ -31,5 +32,5 @@ jobs:
           run:
             echo "Deploying the application..." # Add your deployment commands here
             # Add your deployment commands here
-            
+
             
