@@ -20,8 +20,8 @@ jobs:
 
         - name: Install dependencies
           run: |
-            py -m pip install django
-            pip install -r requirements.txt
+             pip install django
+             pip install -r requirements.txt
 
         - name: Run tests
           run: |
